@@ -115,11 +115,16 @@ async function loginUser(req, res) {
     return res.status(200).json({
       message: "Login successful",
       user: {
-        _id: user._id,
-        name: user.name,
-        email: user.email,
-        department: user.department,
-      },
+    _id: user._id,
+    name: user.name,
+    email: user.email,
+    studentId: user.studentId,
+    university: user.university,
+    department: user.department,
+    batch: user.batch,
+    phone: user.phone,
+    profileImage: user.profileImage,
+},
     });
   } catch (error) {
     console.log("Login error:", error);
